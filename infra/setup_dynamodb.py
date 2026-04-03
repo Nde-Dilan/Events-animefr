@@ -1,0 +1,1 @@
+# setup_dynamodb.py
