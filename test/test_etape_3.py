@@ -10,9 +10,9 @@ from pipeline.subtitle   import generate_srt
 #    (uploade d'abord un .mp3 court dans animefr-episodes/)
 transcript = start_transcription(
     bucket='animefr-episodes',
-    key='test_clip.m4a',
+    key='test_clip.mp3',
     episode_id='test-ep001',
-    source_lang='en-US'
+    source_lang='ja-JP'
 )
 
 print("\n--- Transcription ---")
@@ -20,12 +20,12 @@ for seg in transcript[:3]:  # Affiche les 3 premiers segments
     print(f"  [{seg['start']}s → {seg['end']}s] {seg['text']}")
 
 # 2. Traduction
-translated = translate_transcript(transcript, source_lang='en', target_lang='fr')
+translated = translate_transcript(transcript, source_lang='ja-JP', target_lang='fr')
 
 print("\n--- Traduction ---")
 for seg in translated[:3]:
     print(f"  [{seg['start']}s → {seg['end']}s]")
-    print(f"    EN : {seg['original']}")
+    print(f"    JP : {seg['original']}")
     print(f"    FR : {seg['text']}")
 
 # 3. Génération du .SRT
