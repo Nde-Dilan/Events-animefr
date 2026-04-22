@@ -1,0 +1,57 @@
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging / build output
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Test / coverage artifacts
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Type checker / lint caches
+.mypy_cache/
+.pyright/
+.ruff_cache/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Local environment and secrets
+.env
+.env.*
+*.env
+
+# IDE / editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# AWS / serverless tooling
+.aws-sam/
+.serverless/
+.chalice/
+.aws/
+
+# AWS CLI local credentials/config backups
+awscli.*
+
+# Logs
+*.log
